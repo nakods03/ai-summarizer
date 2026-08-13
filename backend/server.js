@@ -3,7 +3,7 @@ require("dotenv").config();
 const cors = require("cors");
 const express = require ("express")
 const app = express();
-const PORT = 5001;
+const PORT = process.env.PORT || 5001;
 const Groq = require("groq-sdk") 
 const multer = require("multer")
 const mammoth = require("mammoth")
@@ -29,7 +29,7 @@ const groq = new Groq({
 app.post("/summarize" , upload.single("file"), async (req, res) =>{
      const notes = req.body.notes;
 
-     if(!note?.trim() && !req.file){
+     if(!notes?.trim() && !req.file){
         return res.status(400).json({
             error: "Please enter notes or file."
         });
@@ -78,7 +78,7 @@ app.post("/summarize" , upload.single("file"), async (req, res) =>{
 });
 
 
-app.listen(PORT, () =>{
+app.listen(PORT,"0.0.0.0", () =>{
     console.log(`server is running on ${PORT}`);
 });
 
