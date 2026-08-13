@@ -37,7 +37,6 @@ function App(){
 
         <span className="upload-subtext">
         {file ? "File selected" : "Click to browse * Upto 10 MB only"}
-        {file ? "File selected" : ""}
         </span>
        </label>
 
@@ -71,7 +70,7 @@ function App(){
                 formData.append("file", file);
                }
 
-               fetch("http://localhost:5001/summarize" ,{
+               fetch("https://ai-summarizer-lqhn.onrender.com/summarize" ,{
                method: "POST",
                 body: formData
                 })
