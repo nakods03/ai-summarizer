@@ -67,7 +67,7 @@ app.post("/summarize" , upload.single("file"), async (req, res) =>{
                 content:`You are an AI summarization assistant. Summarize the following content clearly and concisely.Keep the important facts and key points.Do not add information that is not present in the content.Use simple, easy-to-understand language.Content to summarize:\n\n${texttoSummarize}`
             }
         ],
-        model: "llama-3.1-8b-instant"
+        model: "openai/gpt-oss-20b"
      });
 
      const summary = completion.choices[0].message.content;

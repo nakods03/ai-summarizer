@@ -1,16 +1,48 @@
-# React + Vite
+# AI Summarizer
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+An AI-powered web application that summarizes notes and documents using the Groq API.
 
-Currently, two official plugins are available:
+## 🚀 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+https://ai-summarizer-demo-025b.onrender.com
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Summarize pasted text
+- Upload and summarize PDF files
+- Upload and summarize DOCX files
+- Automatically extracts text from uploaded documents
+- Responsive and modern UI
+- AI-generated concise summaries
+- File size limit of 10 MB
 
-## Expanding the Oxlint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+### Frontend
+- React
+- Vite
+- CSS
+
+### Backend
+- Node.js
+- Express.js
+- Multer
+- pdf-parse
+- Mammoth
+
+### AI
+- Groq API
+- Llama 3.1 8B Instant
+
+## 🏗️ Architecture
+
+React Frontend → Express Backend → Groq API → AI Summary
+
+## ⚙️ Running Locally
+
+### Frontend
+
+```bash
+cd frontend
+npm install
+npm run dev
