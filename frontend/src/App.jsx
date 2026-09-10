@@ -1,5 +1,6 @@
 import {useState} from "react";
 import "./App.css";
+import ReactMarkdown from "react-markdown";
 
 function App(){
   const[message, setMessage] = useState("");
@@ -95,9 +96,9 @@ function App(){
          YOUR SUMMARY
       </div>
     
-    <div className = "summary">
-         {message || "Your Summary will appear is here."}
-    </div>
+   <div className="summary">
+    {message ? <ReactMarkdown>{message}</ReactMarkdown> : "Your Summary will appear is here."}  
+  </div>
     </div>
     </div>
     );
